@@ -1,4 +1,5 @@
 import ast
+from operator import itemgetter
 
 biblioteka = dict()
 
@@ -25,4 +26,15 @@ for i in range(int(liczba_egzemplarzy)):
     dane_egzemplarza = eval(input())
     ksiazka = Ksiazka(dane_egzemplarza[0], dane_egzemplarza[1], dane_egzemplarza[2])
     ksiazka.dodaj_ksiazke()
-    print((ksiazka.tytul, ksiazka.autor, biblioteka[(ksiazka.tytul, ksiazka.autor)]))
+    # print((ksiazka.tytul, ksiazka.autor, biblioteka[(ksiazka.tytul, ksiazka.autor)]))
+
+wynik = list[]
+
+for (tytul, autor), egzemplarze in biblioteka.items():
+    wynik.append((tytul,autor,egzemplarze))
+
+wynik = sorted(wynik,key=itemgetter(0))
+
+for m in wynik:
+    print(m)
+    
