@@ -28,7 +28,7 @@ for i in range(int(liczba_egzemplarzy)):
     ksiazka.dodaj_ksiazke()
     # print((ksiazka.tytul, ksiazka.autor, biblioteka[(ksiazka.tytul, ksiazka.autor)]))
 
-wynik = list[]
+wynik = list()
 
 for (tytul, autor), egzemplarze in biblioteka.items():
     wynik.append((tytul,autor,egzemplarze))
